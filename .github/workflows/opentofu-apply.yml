@@ -7,18 +7,12 @@ jobs:
   opentofu-apply:
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-        shell: bash
-
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
       
     - name: Setup OpenTofu
-      uses: opentofu/setup-opentofu@v1.0.6
-      with:
-        terraform_wrapper: false
+      uses: opentofu/setup-opentofu@12f4debbf681675350b6cd1f0ff8ecfbda62027b
     
     - name: apply directly
       run: |

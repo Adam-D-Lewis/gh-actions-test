@@ -13,6 +13,8 @@ jobs:
       
     - name: Setup OpenTofu
       uses: opentofu/setup-opentofu@12f4debbf681675350b6cd1f0ff8ecfbda62027b
+      with:
+        tofu_wrapper: false
     
     
     - name: tofu init

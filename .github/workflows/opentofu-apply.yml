@@ -14,10 +14,12 @@ jobs:
     - name: Setup OpenTofu
       uses: opentofu/setup-opentofu@12f4debbf681675350b6cd1f0ff8ecfbda62027b
     
+    
+    - name: tofu init
+      run: tofu init
+    
     - name: apply directly
-      run: |
-        tofu init
-        tofu apply -auto-approve
+      run: tofu apply -auto-approve
 
     # - name: Run makefile apply command
     #   run: make apply

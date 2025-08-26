@@ -12,7 +12,12 @@ jobs:
       uses: actions/checkout@v4
       
     - name: Setup OpenTofu
-      uses: opentofu/setup-opentofu@v1
-      
-    - name: Run makefile apply command
-      run: make apply
+      uses: opentofu/setup-opentofu@v1.0.6
+    
+    - name: apply directly
+      run: |
+        tofu init
+        tofu apply -auto-approve
+
+    # - name: Run makefile apply command
+    #   run: make apply
